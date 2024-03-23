@@ -1,35 +1,41 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import ScoreCard from "./components/ScoreCard";
+
+import paperIcon from "./assets/images/icon-paper.svg";
+import rockIcon from "./assets/images/icon-rock.svg";
+import scissorsIcon from "./assets/images/icon-scissors.svg";
+import SelectionCard from "./components/SelectionCard";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div className="w-full h-screen bg-radial-custom grid grid-cols-1 items-center justify-items-center text-white text-2xl py-1 font-semibold">
+      <ScoreCard />
+      <Group />
+    </div>
+  );
 }
 
-export default App
+export default App;
+
+function Group() {
+  return (
+    <div className="bg-[url('src/assets/images/bg-triangle.svg')] bg-contain bg-center bg-no-repeat">
+      <div className="grid grid-cols-2 grid-rows-2 gap-x-12">
+        <SelectionCard
+          imgSrc={paperIcon}
+          color="from-[#ec9e0e] to-[#eca922] mt-[-26px]"
+          className="justify-self-start"
+        />
+        <SelectionCard
+          imgSrc={scissorsIcon}
+          color="from-[#4865f4] to-[#5671f5] mt-[-26px]"
+          className="justify-self-end"
+        />
+        <SelectionCard
+          imgSrc={rockIcon}
+          color="from-[#dc2e4e] to-[#dd405d]"
+          className="col-start-1 col-end-3 justify-self-center"
+        />
+      </div>
+    </div>
+  );
+}

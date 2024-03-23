@@ -25,6 +25,8 @@ The designs were created to the following widths:
 - Score Text: hsl(229, 64%, 46%)
 - Header Outline: hsl(217, 16%, 45%)
 
+
+
 ### Background
 
 - Radial Gradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%)

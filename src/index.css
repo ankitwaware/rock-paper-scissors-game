@@ -1,68 +1,39 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+@layer base {
+  html {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
   }
 }
+
+@layer utilities {
+  .bg-radial-custom {
+    background: radial-gradient(
+      ellipse at top center,
+      rgb(31, 55, 86),
+      rgb(20, 21, 57)
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+/* - Scissors Gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%)
+- Paper Gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%)
+- Rock Gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%)
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%) */
+
+/* - Scissors Gradient: #ec9e0e to  #eca922,
+- Paper Gradient: #4865f4 to  #5671f5,
+- Rock Gradient: #dc2e4e to  #dd405d
+- Lizard Gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%)
+- Cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%) */
+
+/* rgb(96, 110, 133) */
+/* #606e85 header outline */
+/* #3b4363  dark text */
+/* #2a46c0  score text */
