@@ -11,12 +11,9 @@
 
 @layer utilities {
   .bg-radial-custom {
-    background: radial-gradient(
-      ellipse at top center,
-      rgb(31, 55, 86),
-      rgb(20, 21, 57)
-    );
+    background: radial-gradient(closest-side, #3f87a6, #ebf8e1, #f69d3c);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }

@@ -1,8 +1,8 @@
 export default function ScoreCard() {
   return (
-    <div className="border-2 border-[#606e85] rounded-lg  p-2 pl-4 w-4/5 md:w-2/5">
+    <div className="border-2 border-[#606e85] text-white font-semibold  rounded-lg  p-2 pl-4 w-4/5 md:w-2/5">
       <div className="flex justify-between items-center">
-        <ul className="text-xl leading-4">
+        <ul className="leading-4">
           <li>ROCK</li>
           <li>PAPER</li>
           <li>SCISSORS</li>
