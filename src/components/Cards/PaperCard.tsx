@@ -1,13 +1,13 @@
-import SelectionCard from "../SelectionCard";
+import ChooseCard from "./chooseCard";
 import paperIcon from "../../assets/images/icon-paper.svg";
 
-export default function PaperCard() {
+export default function PaperCard({ className }: { className?: string }) {
   return (
-    <SelectionCard
+    <ChooseCard
       imgSrc={paperIcon}
-      color="from-[#4865f4] to-[#5671f5] mt-[-26px]"
-      className="justify-self-start"
-      cardname="paper"
+      color="from-[#4865f4] to-[#5671f5]"
+      className={className}
+      cardName="paper"
     />
   );
 }

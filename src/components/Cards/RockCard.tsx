@@ -1,13 +1,13 @@
-import SelectionCard from "../SelectionCard";
-import rockIcon from "../../assets/images/icon-rock.svg"
+import ChooseCard from "./chooseCard";
+import rockIcon from "../../assets/images/icon-rock.svg";
 
-export default function RockCard() {
+export default function RockCard({ className }: { className?: string }) {
   return (
-    <SelectionCard
+    <ChooseCard
       imgSrc={rockIcon}
       color="from-[#dc2e4e] to-[#dd405d]"
-      className="col-start-1 col-end-3 justify-self-center"
-      cardname="rock"
+      className={className}
+      cardName="rock"
     />
   );
 }

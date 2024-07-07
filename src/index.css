@@ -3,9 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-  html {
+  body {
     font-family: "Barlow Semi Condensed", sans-serif;
     font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
   }
 }
 
