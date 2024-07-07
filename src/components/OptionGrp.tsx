@@ -4,7 +4,7 @@ import ScissorsCard from "./Cards/scissorsCard";
 
 export default function OptionGroup() {
   return (
-    <div className="bg-[url('src/assets/images/bg-triangle.svg')] bg-contain bg-center bg-no-repeat">
+    <div className="bg-triangle">
       <div className="w-full grid grid-cols-2 grid-rows-2 gap-x-10">
         <PaperCard className="justify-self-start mt-[-26px]" />
         <ScissorsCard className="justify-self-end mt-[-26px]" />
