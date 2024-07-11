@@ -7,7 +7,7 @@ export type cardnameType = "paper" | "scissor" | "rock";
 export default function getCard(cardname: cardnameType) {
   switch (cardname) {
     case "paper":
-      return <PaperCard />;
+      return <PaperCard  />;
     case "scissor":
       return <ScissorsCard />;
     case "rock":

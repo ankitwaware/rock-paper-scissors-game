@@ -8,8 +8,8 @@ export default function EmptyCard() {
   useEffect(() => {
     setTimeout(() => {
       setshowRandomState(true);
-    }, 500);
+    }, 1000);
   }, [setshowRandomState]);
 
-  return <button className="size-20 bg-[#3b4363] rounded-full" />;
+  return <button className="size-20 lg:size-40 bg-[#3b4363] rounded-full lg:order-4" />;
 }

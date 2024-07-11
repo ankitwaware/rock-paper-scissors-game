@@ -1,12 +1,12 @@
 import { selector } from "recoil";
 
-import { selCardState, randomCardState, userScoreState } from "./atoms";
+import { userCardState, randomCardState, userScoreState } from "./atoms";
 
 // Rules
 const winOrLooseState = selector({
   key: "result",
   get: ({ get }) => {
-    const userPicked = get(selCardState);
+    const userPicked = get(userCardState);
     const housePicked = get(randomCardState);
 
     switch (userPicked) {
@@ -22,7 +22,6 @@ const winOrLooseState = selector({
   },
   set: ({ set }, newResultValue) => {
     set(userScoreState, (prevVal) => {
-
       if (newResultValue == "win") {
         return prevVal + 1;
       } else {

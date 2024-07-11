@@ -10,7 +10,7 @@ export default function RulesBtn() {
         console.log("open");
         setShowRules(true);
       }}
-      className="border border-white rounded-md text-white text-sm  w-24 py-1"
+      className="border border-white rounded-md text-white text-sm  w-24 py-1 lg:justify-self-end"
     >
       Rules
     </button>

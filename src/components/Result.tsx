@@ -1,6 +1,6 @@
 import { useRecoilValue, useResetRecoilState } from "recoil";
 import {
-  selCardState,
+  userCardState,
   randomCardState,
   showRandomState,
   showResultState,
@@ -9,7 +9,7 @@ import { winOrLooseState } from "../store/selectors";
 
 export default function Result() {
   const finalResult = useRecoilValue(winOrLooseState);
-  const resetUserCard = useResetRecoilState(selCardState);
+  const resetUserCard = useResetRecoilState(userCardState);
   const resetrandomCard = useResetRecoilState(randomCardState);
   const resetshowRandomState = useResetRecoilState(showRandomState);
   const resetshowResultState = useResetRecoilState(showResultState);
@@ -22,10 +22,12 @@ export default function Result() {
   }
 
   return (
-    <div className="flex flex-col gap-y-3">
-      <h1 className="text-5xl font-bold text-white">You {finalResult}</h1>
+    <div className="flex flex-col gap-y-3 ">
+      <h1 className="text-5xl md:text-6xl font-bold text-white">
+        You {finalResult}
+      </h1>
       <button
-        className="bg-white p-2 text-sm rounded-md font-light"
+        className="bg-white p-2 text-sm md:text-xl rounded-md font-light"
         onClick={onPlayAgain}
       >
         PLAY AGAIN

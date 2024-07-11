@@ -1,59 +1,35 @@
-import { useRecoilValue } from "recoil";
-import {
-  selCardState,
-  showRandomState,
-  showResultState,
-  showRulesState,
-} from "./store/atoms";
-// import { useState, useEffect } from "react";
-
-import ScoreCard from "./components/ScoreCard";
-import OptionGroup from "./components/OptionGrp";
-import RulesBtn from "./components/RulesBtn";
-
-import RandomCard from "./components/Cards/randomCard";
-import EmptyCard from "./components/Cards/EmptyCard";
-import Result from "./components/Result";
-
-import getCard, { cardnameType } from "./utils/getCard";
 import { createPortal } from "react-dom";
+import { useRecoilValue } from "recoil";
+import { userCardState, showResultState, showRulesState } from "./store/atoms";
+import { cardnameType } from "./utils/getCard";
+
+import Score from "./components/Score";
+import RulesBtn from "./components/RulesBtn";
+import UserAndRamdomCard from "./components/userSelected";
+import OptionGroup from "./components/OptionGroup";
+import Result from "./components/Result";
 import RulesModal from "./components/RulesModal";
 
 const portalContainer = document.getElementById("modal") as HTMLElement;
 
 function App() {
   const showRule = useRecoilValue(showRulesState);
-  const showRandomCard = useRecoilValue(showRandomState);
   const showResultCard = useRecoilValue(showResultState);
-  const userCardName = useRecoilValue(selCardState) as cardnameType;
+  const userCardName = useRecoilValue(userCardState) as cardnameType;
 
   return (
     <div className="h-screen bg-gradient-to-b from-[#1f3756] to-[#141539]">
-      <div className="h-full flex flex-col items-center justify-between pt-6 pb-11">
-        <ScoreCard />
+      <div className="h-dvh grid grid-cols-1 place-items-center lg:p-0 lg:pr-6 pt-6 pb-11">
+        <Score />
 
-        {userCardName ? (
-          <>
-            <div className="grid grid-cols-2  items-center justify-items-center gap-x-6 gap-y-3">
-              <div>{getCard(userCardName)}</div>
-
-              {showRandomCard ? <RandomCard /> : <EmptyCard />}
-
-              <h3 className="text-sm font-semibold text-white">You Picked</h3>
-              <h3 className="text-sm font-semibold text-white">
-                The House Picked
-              </h3>
-            </div>
-          </>
-        ) : (
-          <OptionGroup />
-        )}
+        {userCardName ? <UserAndRamdomCard /> : <OptionGroup />}
 
         {showResultCard && <Result />}
 
         <RulesBtn />
       </div>
 
+      {/* rules modal */}
       {showRule && createPortal(<RulesModal />, portalContainer)}
     </div>
   );

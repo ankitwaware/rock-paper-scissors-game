@@ -8,19 +8,21 @@ export default function RulesModal() {
   const setShowRules = useSetRecoilState(showRulesState);
 
   return (
-    <div className="bg-white text-black text-2xl h-screen flex flex-col justify-between items-center py-14">
-      <h1 className="text-3xl font-bold text-[#2a46c0]">Rules</h1>
+    <div className="size-full h-screen lg:grid lg:place-items-center">
+      <div className="bg-white lg:h-[28rem] text-black text-2xl flex flex-col justify-between items-center gap-y-8 py-14 lg:p-10 lg:rounded-lg">
+        <h1 className="text-3xl font-bold text-[#2a46c0]">Rules</h1>
 
-      <img src={rulesIcon} alt="close icon" />
+        <img src={rulesIcon} alt="close icon" />
 
-      <button
-        onClick={() => {
-          console.log("close ");
-          setShowRules(false);
-        }}
-      >
-        <img src={closeIcon} alt="close icon" />
-      </button>
+        <button
+          onClick={() => {
+            console.log("close ");
+            setShowRules(false);
+          }}
+        >
+          <img src={closeIcon} alt="close icon" />
+        </button>
+      </div>
     </div>
   );
 }

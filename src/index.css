@@ -15,6 +15,7 @@
   .bg-triangle {
     background: url("../src/assets/images/bg-triangle.svg");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: contain;
   }
 }
@@ -22,4 +23,4 @@
 /* rgb(96, 110, 133) */
 /* #606e85 header outline */
 /* #3b4363  dark text */
-/* #2a46c0  score text */
+/* #2a46c0  Score text */

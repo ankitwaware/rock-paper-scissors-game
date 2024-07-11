@@ -1,6 +1,6 @@
 import { atom } from "recoil";
 
-const selCardState = atom({
+const userCardState = atom({
   key: "selCardName",
   default: "",
 });
@@ -11,7 +11,7 @@ const randomCardState = atom({
 });
 
 const userScoreState = atom({
-  key: "score",
+  key: "Score",
   default: 0,
 });
 
@@ -31,7 +31,7 @@ const showRulesState = atom({
 });
 
 export {
-  selCardState,
+  userCardState,
   userScoreState,
   randomCardState,
   showRandomState,
