@@ -18,5 +18,5 @@ export default function UserAndRamdomCard() {
       <h3 className="lg:order-1">You Picked</h3>
       <h3 className="lg:order-2">The House Picked</h3>
     </div>
-  );
+  )
 }
